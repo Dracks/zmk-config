@@ -64,7 +64,7 @@
             bindings = <
 &kp F1        &kp F2   &kp F3      &kp F4           &kp F5                      &kp F6                 &kp F7    &kp F8     &kp F9     &kp F10
 &kp K_VOL_UP  &kp AT   &kp RA(N3)  &kp TAB          &kp ESC                     &kp MINUS              &to 0     &to 4      &to 5      &none
-&kp K_VOL_DN  &kp DQT  &kp RA(N2)  &kp NON_US_BSLH  &kp LS(NON_US_BACKSLASH)    &kp LS(RIGHT_BRACKET)  &kp RPAR  &kp PRCNT  &kp EQUAL  &kp K_EJECT
+&kp K_VOL_DN  &kp DQT  &kp RA(N2)  &kp NON_US_BSLH  &kp LS(NON_US_BACKSLASH)    &kp LS(RIGHT_BRACKET)  &kp RPAR  &kp PRCNT  &kp EQUAL  &kp GRAVE
                                    &trans           &trans                      &trans                 &none
             >;
         };
