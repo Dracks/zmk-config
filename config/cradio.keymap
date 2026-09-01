@@ -16,6 +16,7 @@
         to-bt {
             bindings = <&sl 6>;
             key-positions = <20 24>;
+            layers = <0>;
         };
     };
 
