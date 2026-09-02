@@ -19,6 +19,8 @@
     flavor = "balanced";
 };
 
+&mmv { acceleration-exponent = <2>; };
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -62,10 +64,10 @@
 
         mouse_layer {
             bindings = <
-&none      &mkp MCLK    &mkp RCLK      &mkp LCLK     &none           &none           &mkp LCLK     &mkp RCLK       &mkp MCLK        &none
-&kp LSHFT  &kp LCTRL    &kp LGUI       &kp LALT      &none           &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
-&kp END    &kp PAGE_UP  &kp PAGE_DOWN  &kp HOME      &none           &msc SCRL_LEFT  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none
-                                       &bt BT_SEL 2  &bt BT_SEL 3    &trans          &trans
+&none      &mkp MCLK    &mkp RCLK      &mkp LCLK  &none     &none           &mkp LCLK     &mkp RCLK       &mkp MCLK        &none
+&kp LSHFT  &kp LCTRL    &kp LGUI       &kp LALT   &none     &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
+&kp END    &kp PAGE_UP  &kp PAGE_DOWN  &kp HOME   &none     &msc SCRL_LEFT  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none
+                                       &trans     &trans    &trans          &trans
             >;
         };
 
@@ -81,7 +83,7 @@
         quantums_layer {
             bindings = <
 &kp F1        &kp F2   &kp F3      &kp F4           &kp F5                      &kp F6             &kp F7    &kp F8     &kp F9     &kp F10
-&kp K_VOL_UP  &kp AT   &kp RA(N3)  &kp TAB          &kp ESC                     &kp MINUS          &to 0     &to 4      &to 5      &none
+&kp K_VOL_UP  &kp AT   &kp RA(N3)  &kp TAB          &kp ESC                     &kp MINUS          &to 0     &to 3      &to 4      &none
 &kp K_VOL_DN  &kp DQT  &kp RA(N2)  &kp NON_US_BSLH  &kp LS(NON_US_BACKSLASH)    &kp RIGHT_BRACKET  &kp RPAR  &kp PRCNT  &kp EQUAL  &kp RA(GRAVE)
                                    &trans           &trans                      &trans             &none
             >;
@@ -89,10 +91,10 @@
 
         bluetooth {
             bindings = <
-&bootloader   &trans        &trans        &trans        &trans          &kp GRAVE  &trans  &trans  &trans  &bootloader
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans     &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans        &trans          &trans     &trans  &trans  &trans  &bt BT_CLR
-                                          &trans        &trans          &trans     &to 0
+&bootloader          &trans         &trans        &trans        &trans          &kp GRAVE  &trans  &trans  &trans  &bootloader
+&bt BT_SEL 0         &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans     &trans  &trans  &trans  &trans
+&kp RC(RS(K_EJECT))  &kp RC(RA(Q))  &trans        &trans        &kp RG(L)       &trans     &trans  &trans  &trans  &bt BT_CLR
+                                                  &trans        &trans          &trans     &to 0
             >;
         };
     };
