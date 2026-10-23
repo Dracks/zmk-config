@@ -19,9 +19,7 @@
     flavor = "balanced";
 };
 
-&sl {
-    release-after-ms= <3000>;
-};
+&sl { release-after-ms = <3000>; };
 
 &mmv { acceleration-exponent = <2>; };
 
@@ -68,7 +66,7 @@
 
         mouse_layer {
             bindings = <
-&none      &mkp MCLK    &mkp RCLK      &mkp LCLK  &none     &none           &mkp LCLK     &mkp RCLK       &mkp MCLK        &none
+&none      &mkp RCLK    &mkp MCLK      &mkp LCLK  &none     &none           &mkp LCLK     &mkp MCLK       &mkp RCLK        &none
 &kp LSHFT  &kp LCTRL    &kp LGUI       &kp LALT   &none     &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
 &kp END    &kp PAGE_UP  &kp PAGE_DOWN  &kp HOME   &none     &msc SCRL_LEFT  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none
                                        &trans     &trans    &trans          &trans
